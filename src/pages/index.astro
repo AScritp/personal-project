@@ -5,15 +5,7 @@ import Card from '../components/Card.astro';
 
 <Layout title="MI Proyecto">
 	<main>
-		<svg
-			class="astro-a"
-			width="495"
-			height="623"
-			viewBox="0 0 495 623"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
-			aria-hidden="true"
-		>
+		
 			<path
 				fill-rule="evenodd"
 				clip-rule="evenodd"
@@ -35,53 +27,39 @@ import Card from '../components/Card.astro';
 		</svg>
 		<h1>Bienvenido a mi <br> <span class="text-gradient"> CURVA DE APRENDISAJE</span></h1>
 		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+		
 		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+		<section >
+			<div class="flex-container">
+				<ul>
+					<li><a href="">Home</a></li>
+					<li><a href="">Products</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>
+			</div>
+		</section>
 	</main>
 </Layout>
 
 <style>
+	*{
+		margin: 0;
+		list-style: none;
+		text-decoration: none;
+	}
 	main {
 		margin: auto;
 		padding: 1rem;
 		width: 800px;
 		max-width: calc(100% - 2rem);
-		color: white;
+		color: rgb(0, 0, 0);
+		
 		font-size: 20px;
 		line-height: 1.6;
 	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
+
+
+
 	h1 {
 		font-size: 4rem;
 		font-weight: 700;
@@ -96,28 +74,41 @@ import Card from '../components/Card.astro';
 		background-size: 400%;
 		background-position: 0%;
 	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
+
+
+	.flex-container{
+		
+		display: flex;
+		justify-content: ;
+		margin: auto;
+		align-items: center;
+		height: 100vh;
+		max-width: 100%;
+
 	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
+	.flex-container ul{
+		list-style: none;
+		padding: 0 10px;
 	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
+	.flex-container ul li{
+		display: inline-block;
+		box-sizing: border-box;
+		flex-basis: 100px;
+		background-color: #F5F5F5;
+		text-align: justify;
+		align-content: space-between;
+		margin: 0 0 0 70px;
+		padding: 50px;
+		border-radius: 12px;
+		color: aliceblue;
+	
 	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
+
+	.flex-container ul li a{
+		list-style: none;
+		color: #808080;
 	}
+
+	
+	
 </style>
